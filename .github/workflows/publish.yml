@@ -41,6 +41,7 @@ jobs:
               package_type: 'container',
               visibility: 'public',
             })
+          token: ${{ secrets.READ_PACKAGES_TOKEN }}
 
       - name: Get result
         run: echo "${{steps.list-packages.outputs.result}}"
