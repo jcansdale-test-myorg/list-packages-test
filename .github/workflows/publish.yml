@@ -44,4 +44,4 @@ jobs:
           github-token: ${{ secrets.READ_PACKAGES_TOKEN }}
 
       - name: Get result
-        run: echo "${{steps.list-packages.outputs.result}}"
+        run: echo '${{steps.list-packages.outputs.result}}' | jq
