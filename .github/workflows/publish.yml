@@ -41,7 +41,8 @@ jobs:
               package_type: 'container',
               visibility: 'public',
             })
-          github-token: ${{ secrets.READ_PACKAGES_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # github-token: ${{ secrets.READ_PACKAGES_TOKEN }}
 
       - name: Get result
         run: jq <<< '${{steps.list-packages.outputs.result}}'
